@@ -1,0 +1,278 @@
+@import "_starter"
+$dark-color = #31312f
+$yellow = #f7ef8a
+// $yellow = #ecec85
+$blue = cornflowerblue
+$accent-color = white
+$grey = #3f3f3d
+
+@font-face
+	font-family secret 
+	src url('../fonts/Secret_Words_Script Regular.otf');
+
+body 
+	background $blue
+	font-family: 'Roboto', sans-serif
+	font-weight 300
+	color $accent-color
+	// text-transform uppercase
+	line-height 1.3
+
+p
+	font-size 19px
+	line-height 1.5
+
+h1
+	font-family secret
+	font-size 50px;
+	color $dark-color
+	text-transform lowercase
+
+h2
+	text-align center
+	font-size 30px
+	padding 20px
+	font-weight 100
+	text-align left
+	padding-left 0
+	color $dark-color
+	font-weight 400
+	font-family secret	
+	text-transform lowercase
+	&.twitter-text
+		padding-top 40px
+	span
+		color $yellow
+		font-size 40px
+		font-family secret
+h3
+	color $yellow
+	font-size 25px
+	line-height 1.1
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight 100	
+	text-transform lowercase
+	text-align center
+	max-width 217px
+	margin 0 auto
+	margin-top 37px
+		
+.wrapper
+	max-width 682px
+	margin 0 auto
+	padding 0px 23px
+
+.outerWrapper
+	max-width 720px
+	border 3px solid white
+	margin 0 auto
+	margin-top 50px
+	margin-bottom 50px
+	padding-bottom 54px
+
+.headerWrapper
+	max-width 1000px
+	margin 0 auto
+
+.button
+	background none
+	border none
+	padding 14px 14px
+	background $blue
+	color white
+
+// .button-style
+	
+.st0
+	fill none
+form
+	width 100%
+	margin 0 auto
+	text-align left
+
+section 
+	&:nth-child(1)
+		padding-top 25px
+
+.section__results
+	display none
+input
+	width 100%
+	height 50px
+	// background $accent-color
+	background none
+	border 3px solid $accent-color
+	// border none
+	display inline-block
+	color $yellow
+	text-transform uppercase
+	padding-left 13px
+	outline none
+	&:focus
+		border 3px solid $yellow
+
+input[type="submit"]
+	width 100px
+	color white
+	font-family: 'Arimo', sans-serif;
+	text-transform uppercase
+	padding-left 10px
+	border: 3px solid $accent-color
+	&:hover
+		background $yellow
+		border 3px solid $yellow
+		color black
+	&.highlight
+		background $yellow
+		border 3px solid $yellow
+		color black
+
+::-webkit-input-placeholder {
+   color: white;
+}
+
+
+.userOne
+	&.hide
+		display none
+
+.description
+	p 
+		margin 0
+header
+	width 100%
+	height 100vh
+	background $yellow
+	display flex
+	justify-content center
+	align-items center
+	padding 0px 35px
+	.introText
+		max-width 550px
+		width 90%
+		float left
+		color $dark-color
+	.bird 
+		width 160px
+		float left
+		animation bird 1.5s linear infinite
+		position relative
+		top 20px
+
+	//**********************//
+		//Bird Rocking Animation
+	//**********************//
+	@keyframes bird {
+		0%{
+			transform rotate(-15deg)
+		}
+		50% {
+			transform rotate(-5deg)
+		}
+		100% {
+			transform rotate(-15deg)
+		}
+	}
+
+.box
+	width calc(50% - 20px)
+	margin 10px
+	height 340px
+	float left
+	background $grey
+	position relative
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	.box__track
+		position absolute
+		bottom -5px
+		left 0
+		iframe
+			width 100%
+	.box__icon
+		width 95px
+		margin 0 auto
+		position relative
+		top 27px
+	&:nth-child(1) .box__icon
+		top 38px
+	&:nth-child(2) .box__icon
+		top 40px
+		width 109px
+	&:nth-child(4) .box__icon	
+		width: 103px;
+		top 23px
+
+.loading
+	border-radius 50%
+	width 100px
+	height 100px
+	border .30rem solid white
+	border-top-color black
+	animation spin 1s infinite linear
+	margin 0 auto
+	// margin-bottom 50px
+	transition all 0.6s ease-in
+	opacity 0
+	visibility hidden
+	@keyframes spin {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+	&.show-loading 
+		opacity 1
+		visibility visible
+
+.loadingText
+	display none
+
+.tweet-box
+	background $yellow
+	margin-bottom 30px
+	h3.tweet
+		color black
+		display inline-block
+		max-width 460px
+		margin 21px
+		text-align left
+	.tweet-button
+		display inline-block
+		width 22%
+		position relative
+		top 5px
+		left 0
+
+@media (max-width: 500px)
+	.tweet-box .tweet-button
+		top -15px
+		left 20px
+	.headerWrapper
+		margin-bottom 30px
+	header
+		height 500px
+		.bird
+			width 110px
+	.introText h1
+		font-size 40px
+	p 
+		font-size 15px
+	.box 
+		width 66%
+		min-width 292px
+		position relative
+		left 46%
+		transform translateX(-50%)
+		&.box__icon
+			width 109px
+@media (max-width: 730px)
+	.outerWrapper
+		border none
+
+
+
+
+
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Song</title>
+	<link rel="stylesheet" href="assets/styles/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 	<link href='https://fonts.googleapis.com/css?family=Lobster|Arimo' rel='stylesheet' type='text/css'> -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,100italic,700|Roboto+Condensed:400,700,400italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="assets/scripts/magic-master/magic.css">
+
+	
+</head>
+<body>
+	<header>
+		<div class="headerWrapper">
+			<div class="bird">
+				<img class="bird-icon" src="./assets/images/bird.svg" alt="">
+			</div>
+			<div class="introText">
+				<h1>A Song For This Moment</h1>
+				<p>Have you and your loved one been fussing over which song to choose for your next important life event? Use this app to generate songs for those special moments in the fairest way possible!</p>
+				<a class="smoothScroll" href="#main"><button class="button">LETS GET STARTED</button></a>
+			</div>
+			<br>
+			
+		</div>
+	</header>
+	<main id="main">
+		<div class="outerWrapper clearfix">
+			<section>
+				<div class="wrapper clearfix">
+					<div class="description">
+						<h2>Quick instructions:</h2>
+						<p>This app requires you and your love partner to enter of your favourite artists. The app will then generate a playlist of random tracks from all of your favourite artists and return a random track for each relationship milestone!</p>
+						<br>
+						<p><strong>Note:</strong> You will need a Spotify account to listen to the songs.</p>
+					</div>
+					<h2 class="userOne"><span>Person One:</span><br> Enter Your 3 Favourite Music Artists</h2>
+					<form class="userOne" action="">
+						<input class="selected" type="text" required> <br><br>
+						<input class="selected" type="text" required> <br><br>
+						<input class="selected" type="text" required>
+					</form>
+
+					<h2 class="useTwo"><span>Person Two:</span><br> Enter Your 3 Favourite Music Artists</h2>
+					<form class="userTwo" action="">
+						<input class="selected" type="text" required><br><br>
+						<input class="selected" type="text" required><br><br>
+						<input class="selected" type="text" required><br><br>
+						<a id="results" href="#loading"><input class="button" type="submit"></a>
+						
+					</form>
+				</div>
+			</section>
+			<section>
+				<div class="wrapper">
+					<!-- <h2 class="milestones">Our Life Together in One Playlist</h2> -->
+					<div class="spotifyBox"></div>
+				</div>
+			</section>
+			<div class="loading"></div>
+			<h3 class="loadingText">loading...</h3>
+			<section class="section__results">
+				<div id="loading" class="wrapper">
+					<div class="twitter">
+						<h2 class="twitter-text"><span>Tweet it!</span></h2>
+						<!-- <h3>Let the world know!</h3> -->
+						<div class="tweet-box clearfix">
+							<h3 class="tweet"></h3>
+							<div class="tweet-button"></div>
+						</div>
+					</div>
+					<div class="box">
+						<h3 class="box__milestones">Our First Wedding Song</h3>
+						<div class="box__track weddingSong"></div>
+						<div class="box__icon">
+							<img src="./assets/images/ring.svg" alt="">
+						</div>
+					</div>
+					<div class="box">
+						<h3 class="box__milestones">Our "Lets Make a Baby" Song</h3>
+						<div class="box__track babySong"></div>
+						<div class="box__icon">
+							<img src="./assets/images/makeBaby.svg" alt="">
+						</div>
+					</div>
+					<div class="box">
+						<h3 class="box__milestones">You're Sleeping in the Dog House Song</h3>
+						<div class="box__track dogHouse"></div>
+						<div class="box__icon">
+							<img src="./assets/images/dogHouse.svg" alt="">
+						</div>
+					</div>
+					<div class="box">
+						<h3 class="box__milestones">Our Cooking with No Pants On Song</h3>
+						<div class="box__track cookingSong"></div>
+						<div class="box__icon">
+							<img src="./assets/images/nude.svg" alt="">
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="./assets/scripts/main.js"></script>
+	<script src="./assets/scripts/twitter.js"></script>
+</body>
+</html>
