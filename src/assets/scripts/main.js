@@ -111,7 +111,7 @@ myApp.init = function () {
 			myApp.userChoice = $(choice).val();
 			return myApp.runResults(myApp.userChoice);
 		});
-
+		
 		//When a Promise returns ALL results back
 		//Then loop through our array and randomize
 		Promise.all(userChoiceArray).then(function (response) {
