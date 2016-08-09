@@ -4,7 +4,8 @@
 
 var gulp            = require('gulp');
 var stylus          = require('gulp-stylus');
-var babel			= require('gulp-babel')
+var babel			= require('gulp-babel');
+var concat 			= require('gulp-concat'); 
 
 
 // ----------------------------
@@ -32,7 +33,8 @@ gulp.task('babel', function(){
 		.pipe(babel({
 			presets: ['es2015']
 		}))
-		.pipe(gulp.dest('./src/assets/scripts/main.js'));
+		.pipe(concat('app.js'))
+		.pipe(gulp.dest('./src/assets/scripts/'));
 		// .pipe(reload({stream: true}));
 });
 
