@@ -31,9 +31,6 @@ myApp.runResults = function (choice) {
 					});
 				});
 			});
-			// .fail((err) => {
-			// 	console.log("erroorrrr", err);
-			// });
 		}
 	});
 };
@@ -90,7 +87,7 @@ myApp.displayChoices = function (results) {
 	});
 
 	randomSongs.map(function (song) {
-		randomList = song[Math.floor(Math.random() * song.length)];
+		var randomList = song[Math.floor(Math.random() * song.length)];
 		filteredRandom.push(randomList);
 	});
 

@@ -31,9 +31,6 @@ myApp.runResults = function (choice) {
 					});
 				});
 			});
-			// .fail((err) => {
-			// 	console.log("erroorrrr", err);
-			// });
 		}
 	});
 };
@@ -90,7 +87,7 @@ myApp.displayChoices = function (results) {
 	});
 
 	randomSongs.map(function (song) {
-		randomList = song[Math.floor(Math.random() * song.length)];
+		var randomList = song[Math.floor(Math.random() * song.length)];
 		filteredRandom.push(randomList);
 	});
 
@@ -102,7 +99,9 @@ myApp.displayChoices = function (results) {
 myApp.init = function () {
 	$('form').on('submit', function (e) {
 		e.preventDefault();
-		$('input[type=submit]', this).attr('disabled', 'disabled').addClass('highlight');
+		$('input[type=submit]', this)
+			.attr('disabled', 'disabled')
+			.addClass('highlight');
 		//*** Getting the user's choice
 		//Using toArray() to make our jquery into an JS array
 		//Because promises 
@@ -111,7 +110,7 @@ myApp.init = function () {
 			myApp.userChoice = $(choice).val();
 			return myApp.runResults(myApp.userChoice);
 		});
-		
+
 		//When a Promise returns ALL results back
 		//Then loop through our array and randomize
 		Promise.all(userChoiceArray).then(function (response) {
@@ -122,6 +121,8 @@ myApp.init = function () {
 		$('.loadingText').fadeIn(800);
 	});
 };
+
+
 
 //*** get music genres
 myApp.getArtists = function (chosenArtist) {

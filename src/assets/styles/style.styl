@@ -27,6 +27,9 @@ h1
 	font-size 50px;
 	color $dark-color
 	text-transform lowercase
+	
+a 
+	text-decoration none
 
 h2
 	text-align center
@@ -68,7 +71,7 @@ h3
 	margin 0 auto
 	margin-top 50px
 	margin-bottom 50px
-	padding-bottom 54px
+	// padding-bottom 54px
 
 .headerWrapper
 	max-width 1000px
@@ -80,6 +83,15 @@ h3
 	padding 14px 14px
 	background $blue
 	color white
+	&.button-reg
+		display block
+		margin 0 auto
+		margin-top 30px
+		// margin-left 11px
+		border 2px solid white
+		position relative
+		top 26px
+		// display inline-block
 
 // .button-style
 	
@@ -267,6 +279,10 @@ header
 		transform translateX(-50%)
 		&.box__icon
 			width 109px
+	// .button.button-reg
+	// 	margin-left 0
+	// .wrapper
+	// 	max-width 343px
 @media (max-width: 730px)
 	.outerWrapper
 		border none

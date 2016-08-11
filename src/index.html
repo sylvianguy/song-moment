@@ -5,7 +5,12 @@
 	<title>Song</title>
 	<link rel="stylesheet" href="assets/styles/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- 	<link href='https://fonts.googleapis.com/css?family=Lobster|Arimo' rel='stylesheet' type='text/css'> -->
+
+<!-- 	<meta property="og:url" content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" /> -->
+	<!-- <meta property="og:type" content="article" /> -->
+	<meta property="og:title" content="A Song for This Moment" />
+	<meta property="og:description" content="An app that generates a song for every milestone in your romantic relationship" />
+	<meta property="og:image" content="http://sylvia.io/web-images/emoji.jpg" />
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,100italic,700|Roboto+Condensed:400,700,400italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="assets/scripts/magic-master/magic.css">
 
@@ -41,6 +46,9 @@
 						<input class="selected" type="text" required> <br><br>
 						<input class="selected" type="text" required> <br><br>
 						<input class="selected" type="text" required>
+						<!-- <input class="selected" value="coldplay" type="text" required> <br><br>
+						<input class="selected" value="adele" type="text" required> <br><br>
+						<input class="selected" value="sia" type="text" required> -->
 					</form>
 
 					<h2 class="useTwo"><span>Person Two:</span><br> Enter Your 3 Favourite Music Artists</h2>
@@ -48,6 +56,9 @@
 						<input class="selected" type="text" required><br><br>
 						<input class="selected" type="text" required><br><br>
 						<input class="selected" type="text" required><br><br>
+						<!-- <input class="selected" value="pink floyd" type="text" required><br><br>
+						<input class="selected" value="britney spears" type="text" required><br><br>
+						<input class="selected" value="lifehouse" type="text" required><br><br> -->
 						<a id="results" href="#loading"><input class="button" type="submit"></a>
 						
 					</form>
@@ -79,27 +90,28 @@
 						</div>
 					</div>
 					<div class="box">
-						<h3 class="box__milestones">Our "Lets Make a Baby" Song</h3>
+						<h3 class="box__milestones">Our “Lets Make a Baby” Song</h3>
 						<div class="box__track babySong"></div>
 						<div class="box__icon">
 							<img src="./assets/images/makeBaby.svg" alt="">
 						</div>
 					</div>
 					<div class="box">
-						<h3 class="box__milestones">You're Sleeping in the Dog House Song</h3>
+						<h3 class="box__milestones">“You're Sleeping in the Dog House” Song</h3>
 						<div class="box__track dogHouse"></div>
 						<div class="box__icon">
 							<img src="./assets/images/dogHouse.svg" alt="">
 						</div>
 					</div>
 					<div class="box">
-						<h3 class="box__milestones">Our Cooking with No Pants On Song</h3>
+						<h3 class="box__milestones">Our “Cooking with No Pants On” Song</h3>
 						<div class="box__track cookingSong"></div>
 						<div class="box__icon">
 							<img src="./assets/images/nude.svg" alt="">
 						</div>
 					</div>
 				</div>
+				<a class="submit" href=""><button class="button button-reg">regenerate</button></a>
 			</section>
 		</div>
 	</main>

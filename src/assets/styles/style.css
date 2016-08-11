@@ -195,6 +195,9 @@ h1 {
   color: #31312f;
   text-transform: lowercase;
 }
+a {
+  text-decoration: none;
+}
 h2 {
   text-align: center;
   font-size: 30px;
@@ -238,7 +241,6 @@ h3 {
   margin: 0 auto;
   margin-top: 50px;
   margin-bottom: 50px;
-  padding-bottom: 54px;
 }
 .headerWrapper {
   max-width: 1000px;
@@ -250,6 +252,14 @@ h3 {
   padding: 14px 14px;
   background: #6495ed;
   color: #fff;
+}
+.button.button-reg {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  border: 2px solid #fff;
+  position: relative;
+  top: 26px;
 }
 .st0 {
   fill: none;
